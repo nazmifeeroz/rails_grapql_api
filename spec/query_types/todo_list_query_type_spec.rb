@@ -16,4 +16,15 @@ RSpec.describe QueryTypes::TodoListQueryType do
       expect(query_result.count).to eq(todo_lists.count)
     end
   end
+  describe 'querying a specific todo_list using it\'s id' do
+    it 'returns the queried todo list' do
+      # set the id of list1 as the ID
+      id = todo_lists.first.id
+      args = { id: id }
+      query_result = subject.fields['todo_list'].resolve(nil, args, nil)
+
+      # we should only get the first todo list from the db.
+      expect(query_result).to eq(todo_lists.first)
+    end
+  end
 end
