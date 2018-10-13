@@ -42,6 +42,7 @@ group :test do
   gem 'faker', '~> 1.9', '>= 1.9.1'
   gem 'rspec-rails', '~> 3.8'
   gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  gem 'rspec-graphql_matchers'
 end
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
