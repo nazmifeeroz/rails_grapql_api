@@ -25,7 +25,8 @@ gem 'puma', '~> 3.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'graphql', '~> 1.8', '>= 1.8.10'
+
+gem 'graphql', '~> 1.7', '>= 1.7.14'
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
@@ -37,12 +38,12 @@ group :development, :test do
 end
 
 group :test do
-  gem 'database_cleaner', '~> 1.7'
-  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'
-  gem 'faker', '~> 1.9', '>= 1.9.1'
-  gem 'rspec-rails', '~> 3.8'
-  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
+  gem 'database_cleaner', '~> 1.6', '>= 1.6.2'
+  gem 'factory_bot_rails', '~> 4.8', '>= 4.8.2'
+  gem 'faker', '~> 1.8', '>= 1.8.7'
   gem 'rspec-graphql_matchers'
+  gem 'rspec-rails', '~> 3.7', '>= 3.7.2'
+  gem 'shoulda-matchers', '~> 3.1', '>= 3.1.2'
 end
 group :development do
   gem 'listen', '>= 3.0.5', '< 3.2'
