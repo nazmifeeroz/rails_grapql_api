@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   ItemType = GraphQL::ObjectType.define do
     name 'ItemType'

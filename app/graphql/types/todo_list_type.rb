@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Types
   TodoListType = GraphQL::ObjectType.define do
     name 'TodoListType'
@@ -5,8 +7,8 @@ module Types
 
     field :id, !types.ID
     field :title, !types.String
-    # field :items, types[Types::ItemType] do
-    #   resolve ->(obj, _args, _ctx) { obj.items }
-    # end
+    field :items, types[Types::ItemType] do
+      resolve ->(obj, _args, _ctx) { obj.items }
+    end
   end
 end
